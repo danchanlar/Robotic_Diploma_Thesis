@@ -6,4 +6,5 @@ This folder contains standalone C++ programs that communicate directly with the 
 - implementing admittance control,
 - implementing hybrid force/position control,
 - logging experimental data to CSV files.
+  
 This folder is the most important part of the repository for the real robot force-control experiments. Direct `libfranka` communication was used because it provides access to the 1 kHz control loop, robot model quantities, Jacobian, Coriolis terms, joint torques, and external wrench estimates. Before running any program from this folder on the real robot, the user must verify: - the Ethernet connection, - the Desk state, - FCI activation, - `echo_robot_state`, - emergency stop availability, - safe robot configuration.
