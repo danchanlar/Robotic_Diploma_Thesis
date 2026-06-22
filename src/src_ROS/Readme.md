@@ -5,6 +5,7 @@ This folder contains the ROS 2 related source code and configuration files used 
 - testing fake hardware before real robot execution, 
 - visualizing the robot in RViz,
  - checking ROS 2 controllers and joint states, 
-- preparing higher-level robot workflows. 
+- preparing higher-level robot workflows.
+   
 This code is mainly useful for visualization, planning, debugging, and integration with the ROS 2 ecosystem. The real-time force-control 
 experiments were mainly executed through the non-ROS `libfranka` programs.
