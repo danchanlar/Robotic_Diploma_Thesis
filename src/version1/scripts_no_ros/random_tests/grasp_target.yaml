@@ -1,0 +1,77 @@
+# grasp_target.yaml
+# Frame αναφοράς: fr3_link0
+# Tool/end-effector frame: fr3_hand_tcp
+#
+# ΠΡΟΣΟΧΗ:
+# Τα x,y,z είναι σε μέτρα.
+# Πρέπει να τα προσαρμόσεις στη θέση του αντικειμένου σου.
+#
+# Παράδειγμα:
+# object_position:
+#   x: μπροστά από το robot
+#   y: αριστερά/δεξιά
+#   z: ύψος κέντρου αντικειμένου από τη βάση fr3_link0
+
+frame_id: fr3_link0
+tool_frame: fr3_hand_tcp
+
+object:
+  name: test_object
+
+  # ΑΛΛΑΞΕ ΑΥΤΑ ανάλογα με το πού είναι το αντικείμενο.
+  position:
+    x: 0.45
+    y: 0.00
+    z: 0.08
+
+  # Ενδεικτικό πλάτος αντικειμένου σε μέτρα.
+  width: 0.035
+
+gripper:
+  open_width: 0.060
+  close_width: 0.020
+  speed: 0.03
+  force: 20.0
+
+poses:
+  # Πηγαίνει πρώτα πάνω από το αντικείμενο.
+  pre_grasp:
+    position:
+      x: 0.45
+      y: 0.15
+      z: 0.25
+    orientation_quaternion:
+      x: 1.0
+      y: 1.0
+      z: 0.0
+      w: 0.0
+
+  # Κατεβαίνει αργά στο αντικείμενο.
+  grasp:
+    position:
+      x: 0.45
+      y: 0.00
+      z: 0.115
+    orientation_quaternion:
+      x: 1.0
+      y: 0.0
+      z: 0.0
+      w: 0.0
+
+  # Αφού κλείσει ο gripper, σηκώνει το αντικείμενο.
+  lift:
+    position:
+      x: 0.45
+      y: 0.00
+      z: 0.28
+    orientation_quaternion:
+      x: 1.0
+      y: 0.0
+      z: 0.0
+      w: 0.0
+
+motion:
+  approach_duration_sec: 6.0
+  descend_duration_sec: 5.0
+  lift_duration_sec: 5.0
+  max_cartesian_step_m: 0.002
