@@ -1,0 +1,2 @@
+samples,duration_s,start_x_m,final_x_m,target_x_m,final_x_error_mm,max_xy_error_mm,median_xy_error_transfer_mm,max_fz_contact_N,min_fz_contact_N,median_fz_contact_transfer_N,median_fz_target_transfer_N,mean_abs_force_error_transfer_N,max_tau_ext_norm_Nm,max_tau_cmd_norm_Nm,min_z_m,z_min_safety_m
+2600,26.998,0.44900379,0.35617071,0.35,6.170710000000024,10.146661601019323,7.571540197641428,2.8992507,-0.1596454,1.37931867,0.8,0.7634979149834045,3.215516746648843,3.5466460252208534,0.03934042,0.02952074
